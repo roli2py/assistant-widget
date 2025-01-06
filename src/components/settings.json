@@ -1,0 +1,12 @@
+{
+    "backend": {
+        "token": "TOKEN",
+        "url": "http://localhost:5000"
+    },
+    "visual": {
+        "name": "Assistant",
+        "description": "A helpful assistant",
+        "avatarUrl": "/avatars/bot-avatar.jpg",
+        "sendIconUrl": "/icons/send-icon.png"
+    }
+}

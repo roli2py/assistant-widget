@@ -1,0 +1,158 @@
+div.widget {
+    width: 320px;
+    height: 568px;
+    display: flex;
+    flex-direction: column;
+    background-color: #008cff;
+    border-radius: 16px;
+}
+
+header, footer {
+    flex: 0 0 auto;
+    gap: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+header {
+    height: 82px;
+}
+
+footer {
+    min-height: 82px;
+}
+
+main.chat {
+    flex: 1 0 220px;
+    min-height: 220px;
+    max-height: 404px;
+    background-color: white;
+    padding: 16px;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+/* Reset */
+ul.messages {
+    margin: 0;
+    padding: 0;
+}
+
+ul.messages {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Reset */
+li.message {
+    list-style-type: none;
+}
+
+li.message {
+    margin-top: 16px;
+    width: 80%;
+}
+
+li.message:first-child {
+    margin-top: 0;
+}
+
+li.message.user {
+    align-self: flex-end;
+}
+
+li.message.user > div.message-background {
+    background-color: #c7eeff;
+}
+
+div.message-background {
+    padding: 16px;
+    background-color: #f2f2f2;
+    border-radius: 16px;
+    filter: drop-shadow(0 2px 2px lightgrey);
+}
+
+p.message-text {
+    margin: 0;
+}
+
+p.message-text p:first-of-type {
+    margin-top: 0;
+}
+
+p.message-text p:last-of-type {
+    margin-bottom: 0;
+}
+
+button.send-button {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 7px;
+    margin: 0;
+    background-color: white;
+    border: none;
+    border-radius: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+button.send-button > img {
+    max-width: 80%;
+    height: auto;
+}
+
+div.scrollbar-rounder {
+    flex: 1 0 0;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+textarea {
+    width: 100%;
+    min-height: 32px;
+    max-height: 8em;
+    resize: none;
+    outline: none;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden auto;
+    padding: 7px 14px;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    /* word-break: break-all; */
+}
+
+textarea:disabled {
+    background-color: #e5e5e5;
+}
+
+img.operator-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+/* Reset */
+h2.operator-name, p.operator-description {
+    margin: 0;
+}
+
+h2.operator-name {
+    margin-bottom: 6px;
+    font-size: 1.125em;
+    color: white;
+}
+
+p.operator-description {
+    margin-top: 6px;
+    font-size: .875em;
+    /* font-weight: bold; */
+    color: #414141;
+}

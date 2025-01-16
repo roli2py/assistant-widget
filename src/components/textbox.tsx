@@ -55,7 +55,7 @@ export default function Textbox(
                 textbox.focus()
             }
         }
-    }, [canWriting]);
+    }, [textboxRef, canWriting]);
 
     return (
         <div className="scrollbar-rounder">

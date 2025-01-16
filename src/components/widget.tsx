@@ -14,9 +14,11 @@ import type { MutableRefObject, ReactElement } from "react";
 
 
 export default function Widget(
-    { chatId, savedMessages }:
+    { backendToken, backendPublicUrl, chatId, savedMessages }:
     {
-        chatId: number,
+        backendToken: string,
+        backendPublicUrl: string,
+        chatId: string,
         savedMessages: IMessage[]
     }
 ): ReactElement {
@@ -29,32 +31,20 @@ export default function Widget(
     const textboxRef = useRef(null);
 
     useEffect(() => {
-        const socket = io(settings.backend.url, {
+        const socket = io(backendPublicUrl, {
                 extraHeaders: {
-                    "Authorization": `Bearer ${settings.backend.token}`
+                    "Authorization": `Bearer ${backendToken}`
                 }
             }
         );
 
-        socketRef.current = socket
-
-        socket.on("message", text => {
-            console.log("Message received!");
-            setCanWriting(true);
-            
-            const message = {
-                role: "operator",
-                text
-            }
-            
-            setMessages([...messages, message]);
-        });
+        socketRef.current = socket;
 
         socket.on("connect", () => {
             console.log("Chat connected!");
         });
         
-        socket.on("disconnect", reason => {
+        socket.on("disconnect", () => {
             console.log("Chat disconnected!");
         });
     

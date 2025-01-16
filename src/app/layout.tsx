@@ -32,7 +32,7 @@ const ibmPlexSans = IBM_Plex_Sans({
 
 export default function Layout({ children }: { children: ReactNode }): ReactElement {
     return (
-        <html lang="ru" className={ibmPlexSans.className}>
+        <html lang="en" className={ibmPlexSans.className}>
             <head>
                 <base target="_blank" />
             </head>

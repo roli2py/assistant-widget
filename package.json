@@ -1,6 +1,6 @@
 {
   "name": "assistant-widget",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,13 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@iarna/toml": "^2.2.5",
+    "jose": "^5.9.6",
     "next": "^15.0.2",
     "normalize.css": "^8.0.1",
     "react": "^18",
     "react-dom": "^18",
     "showdown": "^2.1.0",
-    "socket.io-client": "^4.8.1"
+    "socket.io-client": "^4.8.1",
+    "ulidx": "^2.4.1"
   },
   "devDependencies": {
     "@types/node": "^20",
